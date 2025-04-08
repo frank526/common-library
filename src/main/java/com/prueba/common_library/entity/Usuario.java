@@ -40,9 +40,5 @@ public class Usuario {
 
     @Column(nullable = false)
     private String rol;
-
-
-
-    //private boolean activo;
     
 }
