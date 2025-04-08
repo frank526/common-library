@@ -24,5 +24,7 @@ public class UsuarioDto {
     private String contrasena;
     @NotBlank(message = "El rol es obligatorio")
     private String rol;
+    @NotBlank(message = "El user name es obligatorio")
+    private String userName;
     
 }

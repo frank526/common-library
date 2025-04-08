@@ -12,12 +12,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "productos")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,23 +26,15 @@ public class Usuario {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false, name="last_name")
-    private String lastName;
-
-    @Column(nullable = false, name="user_name")
-    private String userName;
+    private String description;
 
     @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false, unique = true)
-    private String password;
+    private String code;
 
     @Column(nullable = false)
-    private String rol;
+    private double price;
 
-
-
-    //private boolean activo;
+    @Column(nullable = false)
+    private int stock;
     
 }
